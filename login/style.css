@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(#212121, #36a5eb);
+}
+body fieldset{
+    padding: 1.5rem;
+
+    border: none;
+}
+body fieldset legend{
+    text-align: center;
+    padding-inline: 1rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #151515;
+}
+
+body fieldset form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body fieldset form label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+body fieldset form input{
+    outline: none;
+
+    width: 14rem;
+    height: 2rem;
+
+    padding: 0.5rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #36a5eb;
+
+    border: none;
+    border-radius: 8px;
+
+    margin-block: 0.5rem;
+
+    background-color: #151515;
+    transition: 0.7s all;
+}
+body fieldset form input:focus{
+    background-color: #151515ac;
+}
+body fieldset form input::placeholder{
+    color: #36a5eb;
+}
+body fieldset form button{
+    cursor: pointer;
+
+    width: 14rem;
+    height: 3rem;
+
+    padding: 0.5rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #36a5eb;
+
+    border: none;
+    border-radius: 8px;
+
+    margin-block: 0.5rem;
+
+    background-color: #151515;
+}
