@@ -8,22 +8,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <a href="../home">Voltar</a> <br><br>
+    <a href="../home" id="a-back">Voltar</a>
     <fieldset>
         <legend>Cadastro de produtos</legend>
         <form action="../php/product_register.php" method="post">
-            <input type="text" name="name" id="name" placeholder="Nome do produto:">
-            <br><br>
-            <textarea name="description" id="description" cols="30" rows="10" placeholder="Descrição do produto:"></textarea>
-            <br><br>
-            <input type="number" name="price" id="price" placeholder="Preço do produto:">
-            <br><br>
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name">
+            <label for="description">Descrição</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <label for="price">Preço</label>
+            <input type="number" name="price" id="price">
             <button type="submit" name="submit">Cadastrar</button>
         </form>        
     </fieldset>
-    <fieldset>
+    <fieldset id="fieldset-info">
         <?php
             
             $sql = "SELECT * FROM produto";
@@ -32,10 +33,15 @@
 
             if($stmt->rowCount() > 0){
                 foreach($stmt as $row){
-                    echo "Id: ".$row['id']."<br>Nome: ".$row['name']."<br>Descrição: ".$row['description']."<br>Preço: ".$row['price']."<br><br>";
+                    echo "<article class='info-user'>
+                        <p class='row-info'>Id:".$row['id']."</p>
+                        <p class='row-info'>Nome:".$row['name']."</p>
+                        <p class='row-info'>Descrição:".$row['description']."</p>
+                        <p class='row-info'>Preço:".$row['price']."</p>
+                    </article>";
                 }
             }else{
-                echo "<h2>Não há clientes cadastrados</h2>";
+                echo "<h2 id='info-erro'>Não há produtos cadastrados</h2>";
             }
         ?>
     </fieldset>

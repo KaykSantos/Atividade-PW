@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar senha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="../home">Voltar</a> <br><br>
+    <a href="../home" id="a-back">Voltar</a> 
     <fieldset>
         <legend>Cadastro de cliente</legend>
         <form action="../php/reset_password.php" method="post">
-            <input type="password" name="old_password" id="old_password" placeholder="Senha antiga:"> 
+            <label for="old_password">Senha antiga</label>
+            <input type="password" name="old_password" id="old_password"> 
             <img src="../assets/imgs/eye.png" alt="Icone de oho - ver senha" id="btn-eye1">
-            <br><br>
-            <input type="password" name="new_password" id="new_password" placeholder="Nova senha:">
+            <label for="new_password">Nova senha:</label>
+            <input type="password" name="new_password" id="new_password">
             <img src="../assets/imgs/eye.png" alt="Icone de oho - ver senha" id="btn-eye2">
-            <br><br>
-            <input type="password" name="repeat_new_password" id="repeat_new_password" placeholder="Repita a nova senha:">
+            <label for="repeat_new_password">Repita a nova senha</label>
+            <input type="password" name="repeat_new_password" id="repeat_new_password">
             <img src="../assets/imgs/eye.png" alt="Icone de oho - ver senha" id="btn-eye3">
-            <br><br>
             <button type="submit" name="submit">Cadastrar</button>
         </form>        
     </fieldset>
